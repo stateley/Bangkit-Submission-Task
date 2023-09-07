@@ -1,0 +1,194 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #081b29;
+    color: #ededed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: transparent;
+    background: transparent;
+    backdrop-filter: blur( 100px );
+    -webkit-backdrop-filter: blur( 20px );
+}
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 15px;
+    
+}
+.navbar a:hover, 
+.navbar a.active{
+    color: white;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+.greetings {
+    display: flex;
+    align-items: center;
+    height: 60vh; /* Sesuaikan tinggi sesuai keinginan Anda */
+    padding: 0 5%;
+    justify-content: flex-start; /* Mengatur elemen di sebelah kiri */
+}
+
+.greetings-content{
+    max-width: 600px;
+}
+
+.greetings-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #00abf0; /* Atur warna teks sesuai keinginan Anda */
+}
+
+.greetings-content h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: aqua;
+}
+
+.greetings-content p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 20px; /* Atur jarak atas paragraf */
+    color: #ededed; /* Atur warna teks sesuai keinginan Anda */
+}
+
+.greetings-content .btn-box{
+    width: 345px;
+    height: 50px;
+    padding-top: 8px;
+}
+
+.btn-box a{
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    display: inline-flex;
+    font-size: 15px;
+    color: #d1d1d1;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    background: rgba( 230, 234, 239, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+}
+
+.greetings-sci{
+   position: absolute;
+   bottom: 40px;
+   width: 170px;
+}
+main {
+    width: 80%;
+    margin-top: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch; /* Tambahkan align-items: stretch; untuk menarik elemen ke tinggi yang sama */
+}
+
+#content {
+    width: 80%;
+    flex: 5; /* Tambahkan flex: 1; untuk mengisi sisa tinggi parent */
+    padding: 20px;
+    margin-right: 20px;
+    background: rgba( 230, 234, 239, 0.1 );
+    border-radius: 10px;
+}
+
+.article {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px; /* Menambahkan jarak antara setiap artikel */
+    padding: 20px;
+}
+
+.article h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.article p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ededed;
+}
+
+.about-me {
+    width: 20%;
+    flex: 1; /* Tambahkan flex: 1; untuk mengisi sisa tinggi parent */
+    padding: 20px;
+    margin-left: 20px;
+    text-align: center;
+    background: rgba( 230, 234, 239, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column; 
+    }
+
+    #content,
+    .about-me {
+        width: 100%; 
+        margin-right: 0; 
+        margin-left: 0; 
+        margin-top: 20px;
+    }
+}
+
+.about-me img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    background-color: #081b29;
+    color: #ededed;
+    padding: 20px 0;
+}

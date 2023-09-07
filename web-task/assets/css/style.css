@@ -5,8 +5,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #081b29;
-    color: #ededed;
+    background-color: #ededed;
+    color: #090909;
 }
 
 .header {
@@ -14,7 +14,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
+    padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,14 +27,14 @@ body {
 
 .logo {
     font-size: 25px;
-    color: #ededed;
+    color: #090909;
     text-decoration: none;
     font-weight: 600;
 }
 
 .navbar a {
     font-size: 18px;
-    color: #ededed;
+    color: #090909;
     text-decoration: none;
     font-weight: 400;
     margin-left: 15px;
@@ -42,7 +42,7 @@ body {
 }
 .navbar a:hover, 
 .navbar a.active{
-    color: white;
+    color: #090909;
 }
 
 *{
@@ -55,34 +55,34 @@ body {
 .greetings {
     display: flex;
     align-items: center;
-    height: 60vh; /* Sesuaikan tinggi sesuai keinginan Anda */
+    height: 60vh; 
     padding: 0 5%;
-    justify-content: flex-start; /* Mengatur elemen di sebelah kiri */
+    justify-content: flex-start; 
 }
 
 .greetings-content{
-    max-width: 600px;
+    max-width: fit-content;
 }
 
 .greetings-content h1 {
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
-    color: #00abf0; /* Atur warna teks sesuai keinginan Anda */
+    color: #090909; 
 }
 
 .greetings-content h3 {
     font-size: 36px;
     font-weight: 700;
-    color: aqua;
+    color: #090909;
 }
 
 .greetings-content p {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
-    margin-top: 20px; /* Atur jarak atas paragraf */
-    color: #ededed; /* Atur warna teks sesuai keinginan Anda */
+    margin-top: 20px; 
+    color: #090909; 
 }
 
 .greetings-content .btn-box{
@@ -98,14 +98,12 @@ body {
     height: 100%;
     display: inline-flex;
     font-size: 15px;
-    color: #d1d1d1;
+    color: #dadada;
     font-weight: 600;
     letter-spacing: 1px;
     text-decoration: none;
-    background: rgba( 230, 234, 239, 0.1 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 20px );
-    -webkit-backdrop-filter: blur( 20px );
+    background:#383838;
+    box-shadow: 0 8px 32px 0 rgba(134, 134, 134, 0.37);
     border-radius: 10px;
 }
 
@@ -114,81 +112,123 @@ body {
    bottom: 40px;
    width: 170px;
 }
-main {
-    width: 80%;
-    margin-top: 20px;
-    overflow: hidden;
+
+/* hide memoji */
+@media screen and (max-width: 768px) {
+    .greetings img {
+        display: none;
+    }
+}
+
+.main {
     display: flex;
-    align-items: stretch; /* Tambahkan align-items: stretch; untuk menarik elemen ke tinggi yang sama */
+    align-items: center;
+    height: 60vh; 
+    padding: 0 5%;
+    justify-content: flex-start; 
 }
 
-#content {
-    width: 80%;
-    flex: 5; /* Tambahkan flex: 1; untuk mengisi sisa tinggi parent */
-    padding: 20px;
-    margin-right: 20px;
-    background: rgba( 230, 234, 239, 0.1 );
+.content1 {
+    padding: 0 5% 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-container{
+    flex: 5;
+    background-color:#dadada;
+    padding: 5%;
     border-radius: 10px;
 }
 
-.article {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
-    margin-bottom: 20px; /* Menambahkan jarak antara setiap artikel */
-    padding: 20px;
+.articles{
+    padding: 3%;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
-
-.article h3 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #ffffff;
-}
-
-.article p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #ededed;
-}
-
 .about-me {
-    width: 20%;
-    flex: 1; /* Tambahkan flex: 1; untuk mengisi sisa tinggi parent */
-    padding: 20px;
-    margin-left: 20px;
-    text-align: center;
-    background: rgba( 230, 234, 239, 0.1 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 20px );
-    -webkit-backdrop-filter: blur( 20px );
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    flex: 1;
+    background-color: #dadada;
+    padding: 2%;
     border-radius: 10px;
-}
-
-@media (max-width: 1000px) {
-    main {
-        flex-direction: column; 
-    }
-
-    #content,
-    .about-me {
-        width: 100%; 
-        margin-right: 0; 
-        margin-left: 0; 
-        margin-top: 20px;
-    }
+    align-self: flex-start;
+    margin-left: 5%;
 }
 
 .about-me img {
-    width: 150px;
-    height: 150px;
-    display: block;
-    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    max-width: 200px;
 }
 
-footer {
+.about-me h3 {
+    padding: 2%;
     text-align: center;
-    background-color: #081b29;
-    color: #ededed;
-    padding: 20px 0;
+}
+
+.about-me p {
+    font-size: smaller;
+    text-align: center;
+}
+.content2{ 
+    padding: 3%;
+    background-color: #dadada;
+    height: 15vh;
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+footer{
+    background-color: #dadada;
+    width: 100%;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    .content1 {
+        flex-direction: column; 
+    }
+
+    /* .about-me{
+        background-color: #dadada;
+        padding: 5%;
+        border-radius: 10px;
+        align-self: flex-start;
+        margin-top: 20px;
+        margin-left: 0;
+        width: 100%;
+    } */
+
+    .about-me {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        flex: 1;
+        background-color: #dadada;
+        padding: 2%;
+        border-radius: 10px;
+        align-self: flex-start;
+        margin-top: 20px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .about-me img{
+       /* display: none; */
+       margin-top: 5%;
+        margin-bottom: 5%;
+        max-width: 200px;
+    }
+    
 }

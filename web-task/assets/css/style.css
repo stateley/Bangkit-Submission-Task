@@ -25,6 +25,10 @@ body {
     -webkit-backdrop-filter: blur( 20px );
 }
 
+/* .header {
+    position: relative; 
+} */
+
 .logo {
     font-size: 25px;
     color: #090909;
@@ -52,7 +56,7 @@ body {
     font-family:'Poppins', sans-serif;
 }
 
-.greetings {
+.jumbotron {
     display: flex;
     align-items: center;
     height: 60vh; 
@@ -60,24 +64,35 @@ body {
     justify-content: flex-start; 
 }
 
-.greetings-content{
+/* .jumbotron {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    margin-top: 20px;
+} */
+
+.jumbotron-content{
     max-width: fit-content;
 }
 
-.greetings-content h1 {
+.jumbotron-content h1 {
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
     color: #090909; 
 }
 
-.greetings-content h3 {
+.jumbotron-content h3 {
     font-size: 36px;
     font-weight: 700;
     color: #090909;
 }
 
-.greetings-content p {
+.jumbotron-content p {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
@@ -85,7 +100,7 @@ body {
     color: #090909; 
 }
 
-.greetings-content .btn-box{
+.jumbotron-content .btn-box{
     width: 345px;
     height: 50px;
     padding-top: 8px;
@@ -107,20 +122,14 @@ body {
     border-radius: 10px;
 }
 
-.greetings-sci{
-   position: absolute;
-   bottom: 40px;
-   width: 170px;
-}
-
 /* hide memoji */
 @media screen and (max-width: 768px) {
-    .greetings img {
+    .jumbotron img {
         display: none;
     }
 }
 
-.main {
+.main-container {
     display: flex;
     align-items: center;
     height: 60vh; 
@@ -128,38 +137,36 @@ body {
     justify-content: flex-start; 
 }
 
-.content1 {
-    padding: 0 5% 2%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.article-container{
+.content {
     flex: 5;
+    padding: 2%;
     background-color:#dadada;
-    padding: 5%;
-    border-radius: 10px;
-}
-
-.articles{
-    padding: 3%;
-    background-color: white;
     border-radius: 10px;
     margin-bottom: 10px;
-}
-.about-me {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    flex: 1;
-    background-color: #dadada;
-    padding: 2%;
-    border-radius: 10px;
-    align-self: flex-start;
-    margin-left: 5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
+.content article{
+    background-color:white;
+    padding: 5%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.content time{   
+    font-size: 14px;
+    color:#38383844;
+}
+.about-me {
+    flex: 1;
+    padding: 2%;
+    background-color: #dadada;
+    border-radius: 10px;
+    margin-left: 5%;
+    align-items: center; 
+}
 .about-me img {
     margin-top: 5%;
     margin-bottom: 5%;
@@ -175,6 +182,7 @@ body {
     font-size: smaller;
     text-align: center;
 }
+
 .content2{ 
     padding: 3%;
     background-color: #dadada;
@@ -195,40 +203,30 @@ footer{
 
 
 @media screen and (max-width: 768px) {
-    .content1 {
-        flex-direction: column; 
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
     }
 
-    /* .about-me{
-        background-color: #dadada;
-        padding: 5%;
-        border-radius: 10px;
-        align-self: flex-start;
-        margin-top: 20px;
-        margin-left: 0;
+    .content {
         width: 100%;
-    } */
+        margin-bottom: 20px;
+    }
 
     .about-me {
-        display: flex;
-        flex-direction: column; 
-        justify-content: center; 
-        align-items: center; 
-        flex: 1;
-        background-color: #dadada;
-        padding: 2%;
-        border-radius: 10px;
-        align-self: flex-start;
-        margin-top: 20px;
-        margin-left: 0;
         width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 2%;
+        align-items: center; 
     }
 
-    .about-me img{
-       /* display: none; */
-       margin-top: 5%;
+    .about-me img {
+        margin-top: 5%;
         margin-bottom: 5%;
         max-width: 200px;
     }
-    
 }
+
+
